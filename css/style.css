@@ -16,8 +16,11 @@ body{
     display: flex;
 }
 .zonaIzquierda{
-    margin-top: 100px;
-    width: 20%;
+    display: flex;
+    border-radius: 10px;
+    background-color: #ffffff0e;
+    margin-top: 20px;
+    width: 100%;
     /* background-color: aqua; */
 }
 .zonaDerecha{
@@ -43,7 +46,7 @@ body{
     margin-left: 90px;
 }
 .fotocohete img{
-    margin-top: -105px;
+    margin-top: -90px;
     width: 110%;
 }
 
@@ -80,9 +83,14 @@ li{
     margin-right: 10px;
     width: 30px;
 }
+
 .informacionExtra{
+    scrollbar-width: none;
+    margin-top: 100px;
+    width: 20%;
+    overflow-y: scroll;
+    height: calc(110vh - 300px);
     color: var(--color--two);
-    display: flex;
     margin-bottom: 40px;
 }
 .contenedorPropio{
