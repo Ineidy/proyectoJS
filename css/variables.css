@@ -1,17 +1,10 @@
 :root{
-    --color--one: #14162C;
-    --color--one--rgba: #191b3fdf;
-    --color--two: #cfcfd1;
-    --color--three: #298bfe;
-    --color--four: #e52d2d;
-    --color--five: #ffffff;
-    --color--six: #ffd733;
-    --padding--pag:15px ;
-    --layout-description-container-x: 10px;
-    --layout-description-container-y: 10px;
-}
-
-@font-face {
-    font-family: "Roboto-Regular";
-    src: url(../storage/font/Roboto/Roboto-Regular.ttf);
+    --color-b1: #16182E;
+    --color-b2: #353656;
+    --color-1: #15172D;
+    --color-2: #00eeff;
+    --color-3: #2994F2;
+    --color-4: #14162C;
+    --color-4-2: #14162C80;
+    --color-1-2: #1F213A;
 }
