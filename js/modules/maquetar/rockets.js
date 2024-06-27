@@ -7,8 +7,8 @@ export const Rockets_menu = async() =>{
     let number = 1;
 
     let cont = 0;
-    if (rockets.length > 12){
-        cont = 12;
+    if (rockets.length > 10){
+        cont = 10;
     }else{
         cont = rockets.length;
     }
@@ -37,6 +37,7 @@ export const Rocket = async(i) =>{
     mGS3.innerHTML = "";
 
     let country = rocket.country;
+    let ide = rocket.id;
     let description = rocket.description;
     let cost_per_launch = rocket.cost_per_launch;
     let first_flight = rocket.first_flight;
@@ -192,7 +193,7 @@ export const Rocket = async(i) =>{
     let plantilla1 = `
     <div class="iG1Element">
                     <div class="iG1ElementImg">
-                            <img class="iG1Img" src="storage/media/images/point.png">
+                            <img class="iG1Img" src="storage/img/verificado.png">
                         </div>
                         <div class="iG1ElementTitle">
                             <p class="iG1Title">${country}</p>
@@ -200,8 +201,17 @@ export const Rocket = async(i) =>{
                         </div>
                     </div>
                     <div class="iG1Element">
+                    <div class="iG1ElementImg">
+                        <img class="iG1Img" src="storage/img/verificado.png">
+                    </div>
+                    <div class="iG1ElementTitle">
+                        <p class="iG1Title">Read more about the rocket</p>
+                        <a href="${wikipedia}" target="_blank" class="iG1Text">Wikipedia</a>
+                    </div>
+                </div>
+                    <div class="iG1Element">
                         <div class="iG1ElementImg">
-                            <img class="iG1Img" src="storage/media/images/point.png">
+                            <img class="iG1Img" src="storage/img/verificado.png">
                         </div>
                         <div class="iG1ElementTitle">
                             <p class="iG1Title">The estimated cost per rocket launch</p>
@@ -210,34 +220,26 @@ export const Rocket = async(i) =>{
                     </div>
                     <div class="iG1Element">
                         <div class="iG1ElementImg">
-                            <img class="iG1Img" src="storage/media/images/point.png">
+                            <img class="iG1Img" src="storage/img/verificado.png">
                         </div>
                         <div class="iG1ElementTitle">
                             <p class="iG1Title">The date of the first flight of the rocket</p>
                             <p class="iG1Text">${first_flight}</p>
                         </div>
                     </div>
-                    <div class="iG1Element">
-                        <div class="iG1ElementImg">
-                            <img class="iG1Img" src="storage/media/images/point.png">
-                        </div>
-                        <div class="iG1ElementTitle">
-                            <p class="iG1Title">Read more about the rocket</p>
-                            <a href="${wikipedia}" target="_blank" class="iG1Text">Wikipedia</a>
-                        </div>
-                    </div>`;
+`;
 
     infoGalery1.innerHTML = plantilla1;
 
     let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${namee}</h1>
+                <h1 id="mainTitle">${namee}: ${ide}</h1>
             </div>
             <div id="infoCriclesGrid" class="mGS2Section">
                 <div class="infoCirclesDiv">
                     <div class="circleDiv">
                         <p class="circeTitle">
-                            <span id="circleTitleMargin">Atmospheric acceleration</span>
+                            <span id="circleTitleMargin">Aceleracion Admosferica</span>
                             <span class="circleInfo">${percent_sea_level} %</span>
                             <span class="circleInfo">${thrust_sea_level_kN} kN</span>
                             <span class="circleInfo">${thrust_sea_level_lbf} Lbf</span>
@@ -264,42 +266,6 @@ export const Rocket = async(i) =>{
             <div id="mGS2SGrid" class="mGS2Section">
                 <div class="mGS2SGGridSection">
                     <div class="mGS2SGGSDiv">
-
-                    </div>
-                    <div class="mGS2SGGSDiv">
-                        <div class="infoFlex">
-                            <p class="infoFlexTitle">INFORMATION ROCKET</p>
-                            <div class="line"></div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Type</p><p class="iFEText Right">${type}</p>
-                            </div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Rocket in service</p><p class="iFEText Right">${active}</p>
-                            </div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Number of stages</p><p class="iFEText Right">${stages}</p>
-                            </div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Number of propellans</p><p class="iFEText Right">${propellansContador}</p>
-                            </div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Landing legs</p><p class="iFEText Right">${landing_legs}</p>
-                            </div>
-                            <div class="infoFlexElement">
-                                <p class="iFEText Left">Leg material</p><p class="iFEText Right">${material}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="imagesGaleryCenter" class="mGS2SGGridSection">
-                    <div class="imagesGalery">
-                        ${htmlImages}
-                    </div>
-                </div>
-                <div class="mGS2SGGridSection">
-                    <div class="mGS2SGGSDiv">
-
-                    </div>
                     <div class="mGS2SGGSDiv">
                         <div class="infoFlex">
                             <p class="infoFlexTitle">ENGINE INFORMATION</p>
@@ -319,10 +285,41 @@ export const Rocket = async(i) =>{
                             ${propellantsHtml}
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="mGS2Section">
 
+                    <div class="mGS2SGGSDiv">
+                        <div class="infoFlex">
+                            <p class="infoFlexTitle">INFORMATION </p>
+                            <div class="line"></div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">Type</p><p class="iFEText Right">${type}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">Active</p><p class="iFEText Right">${active}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">Stages</p><p class="iFEText Right">${stages}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">Landing legs</p><p class="iFEText Right">${landing_legs}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">Leg material</p><p class="iFEText Right">${material}</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+
+                    <div class="mGS2SGGSDiv">
+                    <div id="imagesGaleryCenter" class="mGS2SGGridSection">
+                    <div class="imagesGalery">
+                        ${htmlImages}
+                    </div>
+                </div>
+
+                    
+                </div>
             </div>`;
 
     mGS2.innerHTML = plantilla2;
@@ -379,15 +376,16 @@ export const Rocket = async(i) =>{
         </div>
 
         ${shieldHtml}
-
-    </div>
-    <div id="navigationNumbersCenter" class="mGS3Section">
-        <div class="navigationNumbersDiv">
-            <div class="navigationNumbersGrid">
-
+        
+        <div id="navigationNumbersCenter" class="mGS3Section">
+            <div class="navigationNumbersDiv">
+                <div class="navigationNumbersGrid">
+    
+                </div>
             </div>
         </div>
-    </div>`;
+        </div>
+        `;
 
     mGS3.innerHTML = plantilla3;
 }
