@@ -1,0 +1,11 @@
+
+
+"model": null,
+
+"roles": [
+"Support Ship",
+"Barge Tug"
+],
+"status": "",
+"speed_kn": null,
+"course_deg": null,
