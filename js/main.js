@@ -1,17 +1,16 @@
-import { footer, footerShips , changeFooter, changeFooterShips } from "./modules/footer.js";
+import { footer , changeFooter } from "./modules/footer.js";
 import { menu, changeMenu } from "./modules/menu.js";
 import { Rockets_menu, Rocket } from "./modules/maquetar/rockets.js";
-import { getRockets } from "./modules/app.js";
-import { Ships_menu, Ship } from "./modules/maquetar/ships.js";
+import { Ship, Ships_menu } from "./modules/maquetar/ships.js"; 
+
 
 await footer();
 await Rocket(0);
 await Rockets_menu();
-await footerShips();
-await Ship(0);
-await Ships_menu();
-await menu();
 
+console.log(Ship)
+
+await menu();
 const setFooter = async(element) => {
     let padre = element;
     let hijo = padre.children[1];
@@ -19,21 +18,35 @@ const setFooter = async(element) => {
 
     await changeFooter(id);
 };
-document.setFooter = setFooter;
-const setFooterShips = async(element) =>{
-    let padre = element;
-    let hijo = padre.children[1];
-    let id = hijo.id;
-    await changeFooterShips(id)
-};
-document.setFooterShips = setFooterShips
 
-const setMenu = async(element) =>{
+const setMenuRockets = async(element) =>{
     let id = element.id;
-    await Ship(id -1);
-    await Ships_menu();
     await Rocket(id - 1);
     await Rockets_menu();
     await changeMenu(id);
 };
-document.setMenu = setMenu;
+document.setMenuRockets = setMenuRockets;
+
+const setMenuShips = async(element) =>{
+    let id = element.id;
+    await Ship(id - 1);
+    await Ships_menu();
+    await changeMenu(id)
+};
+document.setMenuShips = setMenuShips
+
+const openRockets = async(element) => {
+        await setFooter(element);
+        await Rocket(0);
+        await Rockets_menu();
+        await menu();
+}
+document.openRockets = openRockets;
+
+const openShips = async(element) => {
+
+    await setFooter(element);
+    await Ship(0);
+    await Ships_menu();
+};
+document.openShips = openShips;

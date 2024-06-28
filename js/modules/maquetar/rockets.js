@@ -15,7 +15,7 @@ export const Rockets_menu = async() =>{
 
     for (let i = 0; i < cont; i++){
         let plantilla = `
-        <div onclick="setMenu(this)" id="${number}" class="navigationNumber">
+        <div onclick="setMenuRockets(this)" id="${number}" class="navigationNumber">
             ${number}
         </div>`;
 

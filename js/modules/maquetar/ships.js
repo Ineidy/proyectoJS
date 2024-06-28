@@ -1,13 +1,14 @@
-import { getShips } from "../app"; 
+import { getShips } from "../app.js"; 
 
 export const Ships_menu = async() => {
     let container = document.querySelector(".navigationNumbersGrid");
     container.innerHTML = "";
+    let shipss = await getShips();
     let number = 1;
-    let cont = 0;
+    let cont = shipss.length;
     for (let i = 0; i < cont.length; i++) {
         let plantilla = `
-        <div onclick="setMenu(this)" id="${number}" class="navigationNumber">
+        <div onclick="setMenuShips(this)" id="${number}" class="navigationNumber">
         ${number}
     </div>`;
         number ++;
