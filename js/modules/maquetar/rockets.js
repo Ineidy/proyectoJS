@@ -3,9 +3,9 @@ import { getRockets } from "../app.js"
 export const Rockets_menu = async() =>{
     let container = document.querySelector(".navigationNumbersGrid");
     container.innerHTML = "";
+    
     let rockets = await getRockets();
     let number = 1;
-
     let cont = 0;
     if (rockets.length > 10){
         cont = 10;

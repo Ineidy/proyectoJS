@@ -14,7 +14,22 @@ let line13 = document.querySelector("#fIL13");
 let line14 = document.querySelector("#fIL14");
 
 let lineList = [line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11, line12, line13, line14];
-
+export const footerShips = async() =>{
+    line1.style.display = "none";
+    line2.style.display = "block";
+    line3.style.display = "none";
+    line4.style.display = "none";
+    line5.style.display = "none";
+    line6.style.display = "none";
+    line7.style.display = "none";
+    line8.style.display = "none";
+    line9.style.display = "none";
+    line10.style.display = "none";
+    line11.style.display = "none";
+    line12.style.display = "none";
+    line13.style.display = "none";
+    line14.style.display = "none";
+}
 export const footer = async() => {
     line1.style.display = "block";
     line2.style.display = "none";
@@ -46,3 +61,20 @@ export const changeFooter = async(id) =>{
         }
     }
 };
+
+
+// export const changeFooterShips = async(id) =>{
+
+//     let element = document.querySelector(`#${id}`);
+//     let elementId = element.id;
+//     for(let i =0; i < lineList.length; i++){
+//         let line = lineList[i];
+//         let lineId = line.id;
+//         if(lineId == elementId){
+//             line.style.display = "block"
+//         }
+//         else{
+//             line.style.display = "none"
+//         }
+//     }
+// }
