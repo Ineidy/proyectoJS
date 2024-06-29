@@ -6,7 +6,7 @@ export const Ships_menu = async() => {
     let shipss = await getShips();
     let number = 1;
     let cont = shipss.length;
-    for (let i = 0; i < cont.length; i++) {
+    for (let i = 0; i < cont; i++) {
         let plantilla = `
         <div onclick="setMenuShips(this)" id="${number}" class="navigationNumber">
         ${number}
@@ -28,27 +28,29 @@ export const Ship = async(i) =>{
 
     let link = ship.link;
     if (link === null){
-        link === 0
+        link = 0
     };
     let launches = ship.launches;
     if (launches === null){
-        launches === 0
+        launches = 0
+    } else if (Array.isArray(launches) && launches.length > 1) {
+        launches = launches.map((launch, index) => `${index + 1}. ${launch}`).join('<br>');
     }
     let homePort = ship.home_port;
     if (homePort === null){
-        homePort === 0
+        homePort = 0
     };
     let legacyId = ship.legacy_id;
     if (legacyId === null){
-        legacyId === 0
+        legacyId = 0
     };
     let roles = ship.roles;
     if (roles === null){
-        roles === 0
+        roles = 0
     };
     let id = ship.id;
     if (id === null){
-        id === 0
+        id = 0
     };
 
     let zonaIzquierda = `
@@ -101,22 +103,67 @@ export const Ship = async(i) =>{
 
 infoGalery1.innerHTML = zonaIzquierda;
 let last_ais_update = ship.last_ais_update;
+if (last_ais_update === null){
+    last_ais_update = 0
+}
 let classs = ship.class;
+if (classs === null){
+    classs = 0
+}
 let type = ship.type;
+if (type === null){
+    type= 0
+}
 let year_built = ship.year_built;
+if (year_built === null){
+    year_built = 0
+}
 let abs = ship.abs;
+if (abs === null){
+    abs = 0
+}
 let mmsi = ship.mmsi;
+if (mmsi === null){
+    mmsi = 0
+}
 let imo = ship.imo;
+if (imo === null){
+    imo = 0
+}
 let active= ship.active;
+if (active === null){
+    active = 0
+}
 let latitude = ship.latitude;
+if (latitude === null){
+    latitude = 0
+}
 let longitude = ship.longitude;
-
+if (longitude === null){
+    longitude = 0;
+}
 let namee = ship.name;
-let mass_kgg = ship.mass_kg;
+let mass_kgg = ship.mass_kg;null
+if (mass_kgg === null){
+    mass_kgg = 0
+}
 let mass_kg = ship.mass_kg / 1000 * 100;
+if (mass_kg === null){
+    mass_kg = 0
+}
 let mass_lbss = ship.mass_lbs;
+if (mass_lbss === null){
+    mass_lbss = 0
+}
 let mass_lbs = ship.mass_lbs / 1000 * 100;
-
+if (mass_lbs === null){
+    mass_lbs = 0
+}
+let image = ship.image;
+let fotos = image ? `<img class="rocketImg" src="${image}" referrerpolicy="no-referrer">` : "";
+if (fotos === null){
+    fotos = `<img class="rocketImg" src="storage/img/ships.png" referrerpolicy="no-referrer">`; 
+}
 
 let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
@@ -153,24 +200,24 @@ let plantilla2 = `
                     <div class="mGS2SGGSDiv">
                     <div class="mGS2SGGSDiv">
                         <div class="infoFlex">
-                            <p class="infoFlexTitle"INFORMATION</p>
+                            <p class="infoFlexTitle">INFORMATION</p>
                             <div class="line"></div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Type</p><p class="iFEText Right">${engines_type} ${engines_version}</p>
+                                <p class="iFEText Left">last-ais-update</p><p class="iFEText Right">${last_ais_update}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Maximum power loss</p><p class="iFEText Right">${engine_loss_max}</p>
+                                <p class="iFEText Left">Class</p><p class="iFEText Right">${classs}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Engine availability</p><p class="iFEText Right">${layout}</p>
+                                <p class="iFEText Left">year_built</p><p class="iFEText Right">${year_built}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Number of engines</p><p class="iFEText Right">${enginesNumber}</p>
+                                <p class="iFEText Left">abs</p><p class="iFEText Right">${abs}</p>
                             </div>
                             <div class="infoFlexElement">
-                            <p class="iFEText Left">Number of engines</p><p class="iFEText Right">${enginesNumber}</p>
+                            <p class="iFEText Left">mmsi</p><p class="iFEText Right">${mmsi}</p>
                         </div>
-                            ${propellantsHtml}
+                            
                         </div>
                     </div>
 
@@ -185,30 +232,41 @@ let plantilla2 = `
                                 <p class="iFEText Left">Active</p><p class="iFEText Right">${active}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Stages</p><p class="iFEText Right">${stages}</p>
+                                <p class="iFEText Left">imo</p><p class="iFEText Right">${imo}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Landing legs</p><p class="iFEText Right">${landing_legs}</p>
+                                <p class="iFEText Left">latitude</p><p class="iFEText Right">${latitude}</p>
                             </div>
                             <div class="infoFlexElement">
-                                <p class="iFEText Left">Leg material</p><p class="iFEText Right">${material}</p>
+                                <p class="iFEText Left">longitude</p><p class="iFEText Right">${longitude}</p>
                             </div>
                         </div>
                     </div>
                     </div>
-                    
                 </div>
-
                     <div class="mGS2SGGSDiv">
                     <div id="imagesGaleryCenter" class="mGS2SGGridSection">
                     <div class="imagesGalery">
-                        ${htmlImages}
+                        ${fotos}
                     </div>
                 </div>
 
                     
                 </div>
-            </div>`;
+`;
 
     mGS2.innerHTML = plantilla2;
+    let plantilla3 = `
+
+    <div id="navigationNumbersCenter" class="mGS3Section">
+        <div class="navigationNumbersDiv">
+            <div class="navigationNumbersGrid">
+
+            </div>
+        </div>
+    </div>
+    `;
+
+    mGS3.innerHTML = plantilla3;
+
 }
