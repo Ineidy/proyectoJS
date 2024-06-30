@@ -28,3 +28,12 @@ export const getRoadster = async() => {
     let res = data.json();
     return res;
 }
+export const getCrew = async() => {
+    const url = 'https://api.spacexdata.com/v4/crew';
+    const options = {
+        method: 'GET'
+    };
+    let data = await fetch(url, options)
+    let res =  data.json();
+    return res
+}
