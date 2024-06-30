@@ -54,7 +54,7 @@ export const historia = async(i) => {
         </div>
         <div class="iG1ElementTitle">
             <p class="iG1Title">Article:</p>
-        <a href="${links}" target="_blank" class="iG1Text">wikipedia</a>
+        <a href="${links}" target="_blank" class="iG1Text">article</a>
         </div>
     </div>
     <div class="iG1Element">
@@ -107,53 +107,6 @@ export const historia = async(i) => {
     let plantilla3 = `
     <div class="mGS3Section"></div>
     <div id="flexRight" class="mGS3Section">
-
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket Weight:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">kg</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width:%"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">lb</p>
-            </div>
-        </div>
-        
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket Height:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> M</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width: %"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> F</p>
-            </div>
-        </div>
-
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket diameter:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> M</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width: %"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">F</p>
-            </div>
-        </div>
-
-        
         <div id="navigationNumbersCenter" class="mGS3Section">
             <div class="navigationNumbersDiv">
                 <div class="navigationNumbersGrid">

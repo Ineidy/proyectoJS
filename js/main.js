@@ -5,6 +5,8 @@ import { Ship, Ships_menu } from "./modules/maquetar/ships.js";
 import { Roadster, Roadster_menu } from "./modules/maquetar/roadster.js";
 import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
 import { History_menu, historia } from "./modules/maquetar/history.js";
+import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
+
 
 await footer();
 await Rocket(0);
@@ -67,6 +69,17 @@ const setMenuHistory = async(element) =>{
 document.setMenuHistory = setMenuHistory
 
 
+const setMenuCapsule = async(element) =>{
+    let id = element.id;
+
+    await Capsule(id - 1);
+    await Cpasules_menu();
+    await changeMenu(id);
+};
+document.setMenuCapsule = setMenuCapsule;
+
+
+
 
 
 
@@ -85,13 +98,17 @@ const openShips = async(element) => {
     await setFooter(element);
     await Ship(0);
     await Ships_menu();
+    await menu();
+
 };
 document.openShips = openShips;
 
 const openRoadster = async(element) => {
     await setFooter(element);
     await Roadster(0);
-    await roadster_menu();
+    await Roadster_menu();
+    await menu();
+
 }
 document.openRoadster= openRoadster;
 
@@ -99,6 +116,8 @@ const openCrew = async(element) => {
     await setFooter(element);
     await Crews(0);
     await Crew_menu();
+    await menu();
+
 }
 document.openCrew= openCrew;
 
@@ -107,5 +126,15 @@ const openHistory = async(element) => {
     await setFooter(element);
     await historia(0);
     await History_menu();
+    await menu();
 };
 document.openHistory = openHistory;
+const openCapsulas = async(element)=>{
+
+    await setFooter(element);
+    await Capsule(0)
+    await Cpasules_menu();
+    await menu();
+
+};
+document.openCapsulas = openCapsulas;
