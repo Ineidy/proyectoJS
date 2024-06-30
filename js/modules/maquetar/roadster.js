@@ -1,11 +1,17 @@
 import { getRoadster } from "../app.js";
 
 export const roadster_menu = async() => {
-    let container = document.querySelector(".navegationNumbersGris");
+    let container = document.querySelector(".navegationNumbersGrid");
     container.innerHTML = "";
     let roadster = await getRoadster();
     let number = 1;
-    let cont = roadster.length;
+    let cont = 0;
+    if (roadster.length > 100000){
+        cont = 100000;
+    }else{
+        cont = roadster.length;
+    }
+
     for (let i = 0; i < cont; i++) {
         let plantilla = `
         <div onclick="setMenuRoasters(this)" id="${number}" class="navigationNumber">

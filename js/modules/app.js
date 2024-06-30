@@ -37,3 +37,12 @@ export const getCrew = async() => {
     let res =  data.json();
     return res
 }
+export const getHistory = async() => {
+    const url = 'https://api.spacexdata.com/v4/history';
+    const options = {
+        method: 'GET'
+    };
+    let data = await fetch(url, options)
+    let res = data.json();
+    return res
+}
