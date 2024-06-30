@@ -98,17 +98,13 @@ const openShips = async(element) => {
     await setFooter(element);
     await Ship(0);
     await Ships_menu();
-    await menu();
-
 };
 document.openShips = openShips;
 
 const openRoadster = async(element) => {
     await setFooter(element);
     await Roadster(0);
-    await Roadster_menu();
-    await menu();
-
+    await roadster_menu();
 }
 document.openRoadster= openRoadster;
 
@@ -116,8 +112,6 @@ const openCrew = async(element) => {
     await setFooter(element);
     await Crews(0);
     await Crew_menu();
-    await menu();
-
 }
 document.openCrew= openCrew;
 
@@ -126,7 +120,6 @@ const openHistory = async(element) => {
     await setFooter(element);
     await historia(0);
     await History_menu();
-    await menu();
 };
 document.openHistory = openHistory;
 const openCapsulas = async(element)=>{

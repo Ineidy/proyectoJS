@@ -55,3 +55,12 @@ export const getCapsules = async() => {
     let res = data.json();
     return res
 }
+export const getCompany = async() => {
+    const url ='https://api.spacexdata.com/v4/company'
+    const opciones = {
+        method: 'GET'
+    }
+    let data = await fetch(url, opciones);
+    let res = data.json();
+    return res;
+}

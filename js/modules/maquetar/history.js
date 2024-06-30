@@ -5,12 +5,7 @@ export const History_menu = async() => {
     container.innerHTML = "";
     let History = await getHistory();
     let number = 1;
-    let cont = 0;
-    if (History.length > 100000){
-        cont = 1000000;
-    }else{
-        cont = History.length;
-    }
+    let cont = History.length
 
     for (let i = 0; i < cont; i++) {
         let plantilla = `
@@ -116,7 +111,7 @@ export const historia = async(i) => {
         </div>
         </div>
         `;
-
+    
     mGS3.innerHTML = plantilla3;
 
 

@@ -6,7 +6,6 @@ export const Cpasules_menu = async() =>{
     container.innerHTML = "";
     let capsules = await getCapsules();
     let number = 1;
-
     let cont = capsules.length;
 
     for (let i = 0; i < cont; i++){
