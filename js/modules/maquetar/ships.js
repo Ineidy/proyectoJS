@@ -36,6 +36,7 @@ export const Ship = async(i) =>{
     } else if (Array.isArray(launches) && launches.length > 1) {
         launches = launches.map((launch, index) => `${index + 1}. ${launch}`).join('<br>');
     }
+
     let homePort = ship.home_port;
     if (homePort === null){
         homePort = 0
