@@ -2,9 +2,9 @@ import { footer , changeFooter } from "./modules/footer.js";
 import { menu, changeMenu } from "./modules/menu.js";
 import { Rockets_menu, Rocket } from "./modules/maquetar/rockets.js";
 import { Ship, Ships_menu } from "./modules/maquetar/ships.js"; 
-import { Roadster, roadster_menu } from "./modules/maquetar/roadster.js";
+import { Roadster, Roadster_menu } from "./modules/maquetar/roadster.js";
 import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
-
+import { History_menu, historia } from "./modules/maquetar/history.js";
 
 await footer();
 await Rocket(0);
@@ -45,7 +45,7 @@ document.setMenuShips = setMenuShips
 const setMenuRoasters = async(element) => {
     let id = element.id;
     await Roadster(id - 1);
-    await roadster_menu();
+    await Roadster_menu();
     await changeMenu(id)
 };
 document.setMenuRoasters = setMenuRoasters
@@ -58,6 +58,13 @@ const setMenuCrew = async(element) => {
 }
 document.setMenuCrew = setMenuCrew
 
+const setMenuHistory = async(element) =>{
+    let id = element.id;
+    await historia(id - 1);
+    await History_menu();
+    await changeMenu(id)
+};
+document.setMenuHistory = setMenuHistory
 
 
 
@@ -94,3 +101,11 @@ const openCrew = async(element) => {
     await Crew_menu();
 }
 document.openCrew= openCrew;
+
+const openHistory = async(element) => {
+
+    await setFooter(element);
+    await historia(0);
+    await History_menu();
+};
+document.openHistory = openHistory;

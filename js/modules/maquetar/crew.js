@@ -111,55 +111,6 @@ export const Crews = async(i) => {
     mGS2.innerHTML = plantilla2
     let plantilla3 = `
 
- <div class="mGS3Section"></div>
-    <div id="flexRight" class="mGS3Section">
-
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket Weight:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">${massKg} kg</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width: ${massKgPercent}%"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">${massLb} lb</p>
-            </div>
-        </div>
-        
-        ${payload_weightsCantidadHtml}
-        
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket Height:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> M</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width:%"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> F</p>
-            </div>
-        </div>
-
-        <div class="iG2Element">
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">Rocket diameter:</p>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText"> M</p>
-            </div>
-            <div class="iG2ElementSection">
-                <div class="bar"><div class="barProgress" style="width:%"></div></div>
-            </div>
-            <div class="iG2ElementSection">
-                <p class="iG2ElementText">F</p>
-            </div>
-        </div>
         
         <div id="navigationNumbersCenter" class="mGS3Section">
             <div class="navigationNumbersDiv">

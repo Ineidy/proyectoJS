@@ -1,6 +1,6 @@
 import { getRoadster } from "../app.js";
 
-export const roadster_menu = async() => {
+export const Roadster_menu = async() => {
     let container = document.querySelector(".navegationNumbersGrid");
     container.innerHTML = "";
     let roadster = await getRoadster();
@@ -230,16 +230,5 @@ export const Roadster = async(i) => {
                 </div>
     `
     mGS2.innerHTML = plantilla2
-
-    let plantilla3 = `
-    <div id="navigationNumbersCenter" class="mGS3Section">
-        <div class="navigationNumbersDiv">
-            <div class="navigationNumbersGrid">
-
-            </div>
-        </div>
-    </div>
-    `
-    mGS3.innerHTML = plantilla3
 };
 
