@@ -9,13 +9,12 @@ export const roadster_menu = async() => {
     for (let i = 0; i < cont; i++) {
         let plantilla = `
         <div onclick="setMenuRoasters(this)" id="${number}" class="navigationNumber">
-        ${number}
-    </div>`;
+        ${number}</div>`;
         number ++;
         container.innerHTML += plantilla;
     }
 };
-console.log("holiiiiiiiiiiiiiiiiis");
+
 export const Roadster = async(i) => {
     let roadsterss = await getRoadster();
     let roadster = roadsterss[i];
@@ -109,7 +108,132 @@ export const Roadster = async(i) => {
     </div>
 
     `
-
     infoGalery1.innerHTML = plantilla1
+
+    let plantilla2 = `
+    <div id="centerTitle" class="mGS2Section">
+                <h1 id="mainTitle">${name}</h1>
+            </div>
+            <div id="infoCriclesGrid" class="mGS2Section">
+                <div class="infoCirclesDiv">
+                    <div class="circleDiv">
+                        <p class="circeTitle">
+                            <span id="circleTitleMargin">Aceleracion Admosferica</span>
+                            <span class="circleInfo">${apoapsis_auu} %</span>
+                            <span class="circleInfo">${apoapsis_au} kN</span>
+                        </p>
+                        <svg class="circleSvg">
+                            <circle class="circle" stroke-dasharray="${apoapsis_auu} 100" r="80" cx="50%" cy="50%" pathlength="100"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="infoCirclesDiv">
+                    <div class="circleDiv">
+                        <p class="circeTitle">
+                            <span id="circleTitleMargin">Speed in space</span>
+                            <span class="circleInfo">${periapsis_auu} %</span>
+                            <span class="circleInfo">${periapsis_au} kN</span>
+                        </p>
+                        <svg class="circleSvg">
+                            <circle class="circle" stroke-dasharray="${periapsis_auu} 100" r="80" cx="50%" cy="50%" pathlength="100"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="infoCirclesDiv">
+                    <div class="circleDiv">
+                        <p class="circeTitle">
+                            <span id="circleTitleMargin">Speed in space</span>
+                            <span class="circleInfo">${semi_major_axis_auu} %</span>
+                            <span class="circleInfo">${semi_major_axis_au} kN</span>
+                        </p>
+                        <svg class="circleSvg">
+                            <circle class="circle" stroke-dasharray="${semi_major_axis_auu} 100" r="80" cx="50%" cy="50%" pathlength="100"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="infoCirclesDiv">
+                    <div class="circleDiv">
+                        <p class="circeTitle">
+                            <span id="circleTitleMargin">Speed in space</span>
+                            <span class="circleInfo">${inclinationn} %</span>
+                            <span class="circleInfo">${inclination} kN</span>
+                        </p>
+                        <svg class="circleSvg">
+                            <circle class="circle" stroke-dasharray="${inclinationn} 100" r="80" cx="50%" cy="50%" pathlength="100"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div id="mGS2SGrid" class="mGS2Section">
+                <div class="mGS2SGGridSection">
+                    <div class="mGS2SGGSDiv">
+                    <div class="mGS2SGGSDiv">
+                        <div class="infoFlex">
+                            <p class="infoFlexTitle">INFORMATION</p>
+                            <div class="line"></div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">launch_date_unix</p><p class="iFEText Right">${launch_date_unix}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">launch_mass_kg </p><p class="iFEText Right">${launch_mass_kg }</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">year_built</p><p class="iFEText Right">${launch_mass_lbs}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">norad_id</p><p class="iFEText Right">${norad_id}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                            <p class="iFEText Left">epoch_jd</p><p class="iFEText Right">${epoch_jd}</p>
+                        </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="mGS2SGGSDiv">
+                        <div class="infoFlex">
+                            <p class="infoFlexTitle">INFORMATION </p>
+                            <div class="line"></div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">orbit_type</p><p class="iFEText Right">${orbit_type}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">periapsis_arg</p><p class="iFEText Right">${periapsis_arg}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">eccentricity</p><p class="iFEText Right">${eccentricity}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">period_days</p><p class="iFEText Right">${period_days}</p>
+                            </div>
+                            <div class="infoFlexElement">
+                                <p class="iFEText Left">speed_kph</p><p class="iFEText Right">${speed_kph}</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="mGS2SGGSDiv">
+                    <div id="imagesGaleryCenter" class="mGS2SGGridSection">
+                    <div class="imagesGalery">
+                    ${fotos}
+                    </div>
+                </div>
+
+                    
+                </div>
+    `
+    mGS2.innerHTML = plantilla2
+
+    let plantilla3 = `
+    <div id="navigationNumbersCenter" class="mGS3Section">
+        <div class="navigationNumbersDiv">
+            <div class="navigationNumbersGrid">
+
+            </div>
+        </div>
+    </div>
+    `
+    mGS3.innerHTML = plantilla3
 };
 

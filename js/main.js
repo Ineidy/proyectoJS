@@ -3,13 +3,12 @@ import { menu, changeMenu } from "./modules/menu.js";
 import { Rockets_menu, Rocket } from "./modules/maquetar/rockets.js";
 import { Ship, Ships_menu } from "./modules/maquetar/ships.js"; 
 import { Roadster, roadster_menu } from "./modules/maquetar/roadster.js";
+import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
 
 
 await footer();
 await Rocket(0);
 await Rockets_menu();
-
-console.log(Ship)
 
 await menu();
 const setFooter = async(element) => {
@@ -19,6 +18,13 @@ const setFooter = async(element) => {
 
     await changeFooter(id);
 };
+
+
+
+
+
+
+
 
 const setMenuRockets = async(element) =>{
     let id = element.id;
@@ -44,7 +50,13 @@ const setMenuRoasters = async(element) => {
 };
 document.setMenuRoasters = setMenuRoasters
 
-
+const setMenuCrew = async(element) => {
+    let id = element.id;
+    await Crews(id - 1);
+    await Crew_menu();
+    await changeMenu(id);
+}
+document.setMenuCrew = setMenuCrew
 
 
 
@@ -75,3 +87,10 @@ const openRoadster = async(element) => {
     await roadster_menu();
 }
 document.openRoadster= openRoadster;
+
+const openCrew = async(element) => {
+    await setFooter(element);
+    await Crews(0);
+    await Crew_menu();
+}
+document.openCrew= openCrew;
