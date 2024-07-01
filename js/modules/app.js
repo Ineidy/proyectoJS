@@ -93,3 +93,13 @@ export const getLanspads = async() => {
     let res = data.json();
     return res;
 }
+
+export const getLaunchpads = async() => {
+    const url ='https://api.spacexdata.com/v4/launchpads'
+    const opciones = {
+        method: 'GET'
+    }
+    let data = await fetch(url, opciones);
+    let res = data.json();
+    return res;
+}
