@@ -103,3 +103,14 @@ export const getLaunchpads = async() => {
     let res = data.json();
     return res;
 }
+
+
+export const getStarlink = async() => {
+    const url ='https://api.spacexdata.com/v4/starlink'
+    const opciones = {
+        method: 'GET'
+    }
+    let data = await fetch(url, opciones);
+    let res = data.json();
+    return res;
+}
