@@ -42,7 +42,7 @@ export const Dragons = async(i) =>{
     let cubic_meters_porcen = (cubic_meters / 100) * 100;
     let cubic_feet = core.launch_payload_vol.cubic_feet;
     let kgReturn = core.return_payload_mass.kg;
-    let kgReturn_porcentaje = (kgReturn / 100) * 100;
+    let kgReturn_porcentaje = (kgReturn / 10000) * 100;
     let lbReturn = core.return_payload_mass.cubic_feet;
     let cubic_meters_return = core.return_payload_vol.cubic_meters;
     let cubic_meters_return_porcen = (cubic_meters_return / 100) * 100;
@@ -232,6 +232,8 @@ let plantilla2 = `
                 </div>
             </div>
             <div id="mGS2SGrid" class="mGS2Section">
+                <div class="mGS2SGGridSection">
+                    <div class="mGS2SGGSDiv">
                     <div class="mGS2SGGSDiv">
                         <div class="infoFlex">
                             <p class="infoFlexTitle">heat_shield </p>
@@ -250,8 +252,7 @@ let plantilla2 = `
                             </div>
                         </div>
                     </div>
-
-                    
+                </div>
                 </div>
 
                     <div class="mGS2SGGSDiv">
@@ -284,6 +285,8 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${lbReturn} lb</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">cubic_meters_return_porcen:</p>
             </div>
@@ -296,8 +299,10 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${cubic_feet_return} F</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
-                <p class="iG2ElementText">payload_volume_cubic_meters_porcentaje:</p>
+                <p class="iG2ElementText">payload_volume_cubic_meters:</p>
             </div>
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${payload_volume_cubic_meters} M</p>
@@ -308,6 +313,8 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${payload_volume_cubic_feet} F</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">trunk_volume_cubic_meters:</p>
             </div>
@@ -320,6 +327,8 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${trunk_volume_cubic_feet} F</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">cargo_solar_array:</p>
             </div>
@@ -332,6 +341,8 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${cargo_unpressurized_cargo} F</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">height_w_trunk_meters:</p>
             </div>
@@ -344,6 +355,8 @@ let plantilla2 = `
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">${height_w_trunk_feet} F</p>
             </div>
+        </div>
+        <div class="iG2Element">
             <div class="iG2ElementSection">
                 <p class="iG2ElementText">diameter_meters:</p>
             </div>
@@ -357,8 +370,6 @@ let plantilla2 = `
                 <p class="iG2ElementText">${diameter_feet} F</p>
             </div>
         </div>
-        
-<div class="mGS3Section"></div>
 <div id="flexRight" class="mGS3Section">
     <div id="navigationNumbersCenter" class="mGS3Section">
         <div class="navigationNumbersDiv">
