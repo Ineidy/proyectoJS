@@ -10,6 +10,7 @@ import { compani, Company_menu } from "./modules/maquetar/company.js";
 import { Cores,Cores_menu } from "./modules/maquetar/cores.js";
 import { Dragons, Dragons_menu } from "./modules/maquetar/dragons.js";
 import { landpads, lanspads_menu } from "./modules/maquetar/landpads.js";
+import { launchpads, launchpads_menu } from "./modules/maquetar/launchpads.js";
 
 
 await footer();
@@ -115,6 +116,16 @@ const setMenuLanspads = async(element) =>{
     await changeMenu(id);
 };
 document.setMenuLanspads = setMenuLanspads;
+const setMenuLaunchpadsn = async(element) =>{
+    let id = element.id;
+
+    await launchpads(id - 1);
+    await launchpads_menu();
+    await changeMenu(id);
+};
+document.setMenuLaunchpadsn = setMenuLaunchpadsn;
+
+
 
 
 
@@ -211,4 +222,14 @@ const openLands = async(element)=>{
 
 };
 document.openLands = openLands;
+
+const openLaunhc= async(element)=>{
+
+    await setFooter(element);
+    await launchpads(0)
+    await launchpads_menu();
+    await menu();
+
+};
+document.openLaunhc = openLaunhc;
 
