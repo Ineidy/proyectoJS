@@ -84,3 +84,12 @@ export const getDragons = async() => {
     let res = data.json();
     return res;
 }
+export const getLanspads = async() => {
+    const url ='https://api.spacexdata.com/v4/landpads'
+    const opciones = {
+        method: 'GET'
+    }
+    let data = await fetch(url, opciones);
+    let res = data.json();
+    return res;
+}
