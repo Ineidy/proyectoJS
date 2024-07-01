@@ -6,6 +6,7 @@ import { Roadster, Roadster_menu } from "./modules/maquetar/roadster.js";
 import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
 import { History_menu, historia } from "./modules/maquetar/history.js";
 import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
+import { compani, Company_menu } from "./modules/maquetar/company.js";
 
 
 await footer();
@@ -78,6 +79,16 @@ const setMenuCapsule = async(element) =>{
 };
 document.setMenuCapsule = setMenuCapsule;
 
+const setMenuCompany = async(element) =>{
+    let id = element.id;
+
+    await compani(id - 1);
+    await Company_menu();
+    await changeMenu(id);
+};
+document.setMenuCompany = setMenuCompany;
+
+
 
 
 
@@ -131,3 +142,13 @@ const openCapsulas = async(element)=>{
 
 };
 document.openCapsulas = openCapsulas;
+
+const openCompany = async(element)=>{
+
+    await setFooter(element);
+    await compani(0)
+    await Company_menu();
+    await menu();
+
+};
+document.openCompany = openCompany;

@@ -22,7 +22,6 @@ export const Cpasules_menu = async() =>{
 export const Capsule = async(i) =>{
     let capsules = await getCapsules();
     let capsule = capsules[i];
-    console.log(capsule);
 
     let infoGalery1 = document.querySelector(".infoGalery1");
     let mGS2 = document.querySelector("#mGS2");
