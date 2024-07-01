@@ -9,6 +9,7 @@ import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
 import { compani, Company_menu } from "./modules/maquetar/company.js";
 import { Cores,Cores_menu } from "./modules/maquetar/cores.js";
 import { Dragons, Dragons_menu } from "./modules/maquetar/dragons.js";
+import { landpads, lanspads_menu } from "./modules/maquetar/landpads.js";
 
 
 await footer();
@@ -106,6 +107,16 @@ const setMenuDragons = async(element) =>{
     await changeMenu(id);
 };
 document.setMenuDragons = setMenuDragons;
+const setMenuLanspads = async(element) =>{
+    let id = element.id;
+
+    await landpads(id - 1);
+    await lanspads_menu();
+    await changeMenu(id);
+};
+document.setMenuLanspads = setMenuLanspads;
+
+
 
 
 
@@ -190,4 +201,14 @@ const openDragons = async(element)=>{
 
 };
 document.openDragons = openDragons;
+
+const openLands = async(element)=>{
+
+    await setFooter(element);
+    await landpads(0)
+    await lanspads_menu();
+    await menu();
+
+};
+document.openLands = openLands;
 
