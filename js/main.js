@@ -8,6 +8,7 @@ import { History_menu, historia } from "./modules/maquetar/history.js";
 import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
 import { compani, Company_menu } from "./modules/maquetar/company.js";
 import { Cores,Cores_menu } from "./modules/maquetar/cores.js";
+import { Dragons, Dragons_menu } from "./modules/maquetar/dragons.js";
 
 
 await footer();
@@ -97,7 +98,14 @@ const setMenuCores = async(element) =>{
     await changeMenu(id);
 };
 document.setMenuCores = setMenuCores;
+const setMenuDragons = async(element) =>{
+    let id = element.id;
 
+    await Dragons(id - 1);
+    await Dragons_menu();
+    await changeMenu(id);
+};
+document.setMenuDragons = setMenuDragons;
 
 
 
@@ -172,4 +180,14 @@ const openCores = async(element)=>{
 
 };
 document.openCores = openCores;
+
+const openDragons = async(element)=>{
+
+    await setFooter(element);
+    await Dragons(0)
+    await Dragons_menu();
+    await menu();
+
+};
+document.openDragons = openDragons;
 
