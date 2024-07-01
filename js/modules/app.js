@@ -74,3 +74,13 @@ export const getCores = async() => {
     let res = data.json();
     return res;
 }
+
+export const getDragons = async() => {
+    const url ='https://api.spacexdata.com/v4/dragons'
+    const opciones = {
+        method: 'GET'
+    }
+    let data = await fetch(url, opciones);
+    let res = data.json();
+    return res;
+}
