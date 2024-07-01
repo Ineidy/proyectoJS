@@ -7,6 +7,7 @@ import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
 import { History_menu, historia } from "./modules/maquetar/history.js";
 import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
 import { compani, Company_menu } from "./modules/maquetar/company.js";
+import { Cores,Cores_menu } from "./modules/maquetar/cores.js";
 
 
 await footer();
@@ -88,6 +89,16 @@ const setMenuCompany = async(element) =>{
 };
 document.setMenuCompany = setMenuCompany;
 
+const setMenuCores = async(element) =>{
+    let id = element.id;
+
+    await Cores(id - 1);
+    await Cores_menu();
+    await changeMenu(id);
+};
+document.setMenuCores = setMenuCores;
+
+
 
 
 
@@ -152,3 +163,13 @@ const openCompany = async(element)=>{
 
 };
 document.openCompany = openCompany;
+const openCores = async(element)=>{
+
+    await setFooter(element);
+    await Cores(0)
+    await Cores_menu();
+    await menu();
+
+};
+document.openCores = openCores;
+
