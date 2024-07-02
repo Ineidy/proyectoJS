@@ -13,6 +13,7 @@ import { landpads, lanspads_menu } from "./modules/maquetar/landpads.js";
 import { launchpads, launchpads_menu } from "./modules/maquetar/launchpads.js";
 import { starlink, Starlink_menu } from "./modules/maquetar/starlink.js";
 import { pailoads_menu, payloads } from "./modules/maquetar/payloads.js";
+import { launches, launches_menu } from "./modules/maquetar/launches.js";
 
 
 await footer();
@@ -144,6 +145,15 @@ const setMenuPay = async(element) =>{
 };
 document.setMenuPay = setMenuPay;
 
+const setMenuLaunches = async(element) =>{
+    let id = element.id;
+
+    await launches(id - 1);
+    await launches_menu();
+    await changeMenu(id);
+};
+document.setMenuLaunches = setMenuLaunches;
+
 
 
 
@@ -273,3 +283,12 @@ const openPay= async(element)=>{
 };
 document.openPay = openPay;
 
+const openLaunches= async(element)=>{
+
+    await setFooter(element);
+    await launches(0)
+    await launches_menu();
+    await menu();
+
+};
+document.openLaunches = openLaunches;
