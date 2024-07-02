@@ -43,12 +43,33 @@ export const payloads = async(i) =>{
     let reference_system = core.reference_system;
     let regime = core.regime;
     let capsule = core.dragon.capsule;
+    if (capsule === null){
+        capsule = 0
+    }
     let mass_returned_kg = core.dragon.mass_returned_kg;
+    if (mass_returned_kg === null){
+        mass_returned_kg = 0
+    }
     let mass_returned_lbs = core.dragon.mass_returned_lbs;
+    if (mass_returned_lbs === null){
+        mass_returned_lbs = 0
+    }
     let flight_time_sec = core.dragon.flight_time_sec;
+    if (flight_time_sec === null){
+        flight_time_sec = 0
+    }
     let manifest = core.dragon.manifest;
+    if (manifest === null){
+        manifest = 0
+    }
     let water_landing = core.dragon.water_landing;
+    if (water_landing === null){
+        water_landing = 0
+    }
     let land_landing = core.dragon.land_landing;
+    if (land_landing === null){
+        land_landing = 0
+    }
     let id = core.id;
     let longitude = core.longitude;
     let longitudee = (longitude / 1000) * 100;

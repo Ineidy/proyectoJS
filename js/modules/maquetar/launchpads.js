@@ -95,7 +95,7 @@ infoGalery1.innerHTML = zonaIzquierda;
 let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
                 <h1 id="mainTitle">LAUNCHPADS =<br></h1>
-                <h1 id="mainTitle"> = ${name}: ${id}</h1>
+                <h1 id="mainTitle"> = ${name}</h1>
             </div>
             <div id="infoCriclesGrid" class="mGS2Section">
                 <div class="infoCirclesDiv">

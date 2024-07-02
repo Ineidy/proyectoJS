@@ -28,8 +28,6 @@ export const Crews = async(i) => {
     mGS2.innerHTML = '';
     let mGS3 = document.querySelector("#mGS3");
     mGS3.innerHTML = '';
-
-
     let name = creew.name;
     let agency = creew.agency;
     let image = creew.image;
@@ -38,8 +36,6 @@ export const Crews = async(i) => {
     let status = creew.status;
     let id = creew.id;
     let fotos = image ? `<img class="rocketImg" src="${image}" referrerpolicy="no-referrer">` : "";
-
-     
     let plantilla1 = `
     <div class="iG1Element">
     <div class="iG1ElementImg">

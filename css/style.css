@@ -19,9 +19,25 @@ body{
     height: 100vh;
     background:var(--color-b1);
 }
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+}
 
+*::-webkit-scrollbar-track {
+    background-color: var(--color-1);
+}
 
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
 
+*::-webkit-scrollbar-thumb {
+
+    border: 1px solid var(--color-1);
+    background-color: var(--color-3);
+}
 
 .footer{
     display: grid;
@@ -58,6 +74,8 @@ body{
     justify-content: center;
 }
 .footerImg{
+    background-color: var(--color-1);
+    border-radius:4px ;
     width: 30px;
     height: 30PX;
 }
@@ -247,7 +265,6 @@ body{
     justify-content: center;
 }
 .imagesGalery{
-    scrollbar-width: none;
     gap: 10px;
     display: flex;
     overflow: hidden;
@@ -270,7 +287,7 @@ body{
     height: 170px;
 }
 .circle{
-    fill: var(--color-1);
+
     stroke:var(--color-3);
     stroke-width: 10px;
     transform-origin: 50%;
