@@ -6,7 +6,7 @@ export const Starlink_menu = async() =>{
     container.innerHTML = "";
     let capsules = await getStarlink();
     let number = 1;
-    let cont = 0;
+    let cont = capsules.length;
     if (rockets.length > 10){
         cont = 10;
     }else{

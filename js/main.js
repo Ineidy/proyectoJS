@@ -12,6 +12,7 @@ import { Dragons, Dragons_menu } from "./modules/maquetar/dragons.js";
 import { landpads, lanspads_menu } from "./modules/maquetar/landpads.js";
 import { launchpads, launchpads_menu } from "./modules/maquetar/launchpads.js";
 import { starlink, Starlink_menu } from "./modules/maquetar/starlink.js";
+import { pailoads_menu, payloads } from "./modules/maquetar/payloads.js";
 
 
 await footer();
@@ -134,6 +135,15 @@ const setMenuStarlink = async(element) =>{
 };
 document.setMenuStarlink = setMenuStarlink;
 
+const setMenuPay = async(element) =>{
+    let id = element.id;
+
+    await payloads(id - 1);
+    await pailoads_menu();
+    await changeMenu(id);
+};
+document.setMenuPay = setMenuPay;
+
 
 
 
@@ -252,4 +262,14 @@ const openStar= async(element)=>{
 
 };
 document.openStar = openStar;
+
+const openPay= async(element)=>{
+
+    await setFooter(element);
+    await payloads(0)
+    await pailoads_menu();
+    await menu();
+
+};
+document.openPay = openPay;
 
