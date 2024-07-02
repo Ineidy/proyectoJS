@@ -94,7 +94,8 @@ export const Crews = async(i) => {
     infoGalery1.innerHTML = plantilla1
     let plantilla2 = `
     <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${name}</h1>
+    <h1 id="mainTitle">CREW =<br></h1>
+                <h1 id="mainTitle">= ${name}</h1>
             </div>
             
 

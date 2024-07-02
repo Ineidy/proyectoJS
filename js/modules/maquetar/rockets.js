@@ -232,7 +232,8 @@ export const Rocket = async(i) =>{
 
     let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${namee}: ${ide}</h1>
+                <h1 id="mainTitle">ROCKETS =<br></h1>
+                <h1 id="mainTitle"> = ${namee}: ${ide}</h1>
             </div>
             <div id="infoCriclesGrid" class="mGS2Section">
                 <div class="infoCirclesDiv">

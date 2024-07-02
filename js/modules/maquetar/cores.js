@@ -157,8 +157,9 @@ export const Cores = async(i) =>{
 
 infoGalery1.innerHTML = zonaIzquierda;
 let plantilla2 = `
-<div id="centerTitle" class="mGS2Section">
-            <h1 id="mainTitle">${serial} : ${id}</h1>
+<div id="centerTitle" class="mGS2Section">                
+<h1 id="mainTitle">CORES =<br></h1>
+            <h1 id="mainTitle"> = ${serial} : ${id}</h1>
         </div>
         
 

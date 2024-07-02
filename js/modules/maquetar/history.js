@@ -89,7 +89,8 @@ export const historia = async(i) =>{
     infoGalery1.innerHTML = plantilla1
     let plantilla2 = `
     <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${title}</h1>
+    <h1 id="mainTitle">HISTORY =<br></h1>
+                <h1 id="mainTitle">= ${title}</h1>
             </div>
             
 

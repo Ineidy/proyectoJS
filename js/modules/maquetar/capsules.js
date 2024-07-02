@@ -108,7 +108,8 @@ export const Capsule = async(i) =>{
 infoGalery1.innerHTML = zonaIzquierda;
 let plantilla2 = `
 <div id="centerTitle" class="mGS2Section">
-            <h1 id="mainTitle">${type} : ${id}</h1>
+<h1 id="mainTitle">CAPSULES =<br></h1>
+            <h1 id="mainTitle"> = ${type} : ${id}</h1>
         </div>
         
 

@@ -200,8 +200,8 @@ export const Dragons = async(i) =>{
 infoGalery1.innerHTML = zonaIzquierda;
 
 let plantilla2 = `
-                <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${name}: ${type}</h1>
+                <div id="centerTitle" class="mGS2Section">                <h1 id="mainTitle">DRAGONS =<br></h1>
+                <h1 id="mainTitle">= ${name}: ${type}</h1>
             </div>
             <div id="infoCriclesGrid" class="mGS2Section">
                 <div class="infoCirclesDiv">

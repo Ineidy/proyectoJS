@@ -157,7 +157,8 @@ export const launches = async(i) =>{
 infoGalery1.innerHTML = zonaIzquierda;
 let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${name} : ${id}</h1>
+                <h1 id="mainTitle">LAUNCHES =<br></h1>
+                <h1 id="mainTitle"> = ${name} : ${id}</h1>
             </div>
             <div id="mGS2SGrid" class="mGS2Section">
                 <div class="mGS2SGGridSection">

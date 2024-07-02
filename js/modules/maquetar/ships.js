@@ -168,7 +168,8 @@ if (fotos === null){
 
 let plantilla2 = `
                 <div id="centerTitle" class="mGS2Section">
-                <h1 id="mainTitle">${namee}</h1>
+                <h1 id="mainTitle">SHIPS =<br></h1>
+                <h1 id="mainTitle"> = ${namee}</h1>
             </div>
             <div id="infoCriclesGrid" class="mGS2Section">
                 <div class="infoCirclesDiv">
