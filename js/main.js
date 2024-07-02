@@ -68,13 +68,13 @@ const setMenuCrew = async(element) => {
 }
 document.setMenuCrew = setMenuCrew
 
-const setMenuHistory = async(element) =>{
+const setMenuHist = async(element) =>{
     let id = element.id;
     await historia(id - 1);
     await History_menu();
     await changeMenu(id)
 };
-document.setMenuHistory = setMenuHistory
+document.setMenuHist = setMenuHist
 
 
 const setMenuCapsule = async(element) =>{
@@ -186,7 +186,7 @@ document.openShips = openShips;
 const openRoadster = async(element) => {
     await setFooter(element);
     await Roadster(0);
-    await roadster_menu();
+    await Roadster_menu();
 }
 document.openRoadster= openRoadster;
 
@@ -202,6 +202,7 @@ const openHistory = async(element) => {
     await setFooter(element);
     await historia(0);
     await History_menu();
+    await menu();
 };
 document.openHistory = openHistory;
 const openCapsulas = async(element)=>{

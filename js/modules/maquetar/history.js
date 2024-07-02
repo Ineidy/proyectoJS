@@ -1,29 +1,34 @@
 import { getHistory } from "../app.js";
 
-export const History_menu = async() => {
-    let container = document.querySelector(".navegationNumbersGrid");
-    container.innerHTML = "";
-    let History = await getHistory();
-    let number = 1;
-    let cont = History.length
 
-    for (let i = 0; i < cont; i++) {
+export const History_menu = async() =>{
+    let container = document.querySelector(".navigationNumbersGrid");
+    container.innerHTML = "";
+    let capsules = await getHistory();
+    let number = 1;
+    let cont = capsules.length;
+
+    for (let i = 0; i < cont; i++){
         let plantilla = `
-        <div onclick="setMenuHistory(this)" id="${number}" class="navigationNumber">
-        ${number}</div>`;
+        <div onclick="setMenuHist(this)" id="${number}" class="navigationNumber">
+            ${number}
+        </div>`;
+
         number ++;
         container.innerHTML += plantilla;
     }
 };
 
-export const historia = async(i) => {
-    let hiss = await getHistory();
-    let hist = hiss[i];
+export const historia = async(i) =>{
+    let capsules = await getHistory();
+    let hist = capsules[i];
+
     let infoGalery1 = document.querySelector(".infoGalery1");
-    infoGalery1.innerHTML ="";
     let mGS2 = document.querySelector("#mGS2");
-    mGS2.innerHTML = "";
     let mGS3 = document.querySelector("#mGS3");
+
+    infoGalery1.innerHTML = "";
+    mGS2.innerHTML = "";
     mGS3.innerHTML = "";
 
     let links = hist.links.article;
