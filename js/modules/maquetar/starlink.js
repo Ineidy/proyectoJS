@@ -7,11 +7,6 @@ export const Starlink_menu = async() =>{
     let capsules = await getStarlink();
     let number = 1;
     let cont = capsules.length;
-    if (rockets.length > 10){
-        cont = 10;
-    }else{
-        cont = rockets.length;
-    }
     for (let i = 0; i < cont; i++){
         let plantilla = `
         <div onclick="setMenuStarlink(this)" id="${number}" class="navigationNumber">

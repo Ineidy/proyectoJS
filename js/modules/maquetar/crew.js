@@ -1,22 +1,19 @@
 import { getCrew } from "../app.js";
 
+
 export const Crew_menu = async() => {
     let container = document.querySelector(".navegationNumbersGrid");
     container.innerHTML = "";
     let crew = await getCrew();
     let number = 1;
-    let cont = 0;
-    if (crew.length > 100000){
-        cont = 100000;
-    }else{
-        cont = crew.length;
-    }
+    let cont = crew.length;
 
     for (let i = 0; i < cont; i++) {
         let plantilla = `
         <div onclick="setMenuCrew(this)" id="${number}" class="navigationNumber">
         ${number}
     </div>`;
+
         number ++;
         container.innerHTML += plantilla;
     }
@@ -111,8 +108,8 @@ export const Crews = async(i) => {
     `
     mGS2.innerHTML = plantilla2
     let plantilla3 = `
-
-        
+    <div class="mGS3Section"></div>
+    <div id="flexRight" class="mGS3Section">
         <div id="navigationNumbersCenter" class="mGS3Section">
             <div class="navigationNumbersDiv">
                 <div class="navigationNumbersGrid">

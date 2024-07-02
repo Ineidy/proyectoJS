@@ -194,6 +194,7 @@ const openCrew = async(element) => {
     await setFooter(element);
     await Crews(0);
     await Crew_menu();
+    await menu();
 }
 document.openCrew= openCrew;
 
