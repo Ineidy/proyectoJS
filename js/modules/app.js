@@ -106,13 +106,22 @@ export const getLaunchpads = async() => {
 
 
 export const getStarlink = async() => {
-    const url ='https://api.spacexdata.com/v4/starlink'
-    const opciones = {
-        method: 'GET'
-    }
-    let data = await fetch(url, opciones);
-    let res = data.json();
-    return res;
+    const URL ='https://api.spacexdata.com/v4/starlink/query'
+    const options = {
+        method: 'POST',
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "query": {},
+            "options": {
+                "limit": 300
+            }
+        })
+    };
+    const res = await fetch(URL, options);
+    const docs = await res.json();
+    return docs.docs;
 }
 
 

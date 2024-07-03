@@ -31,7 +31,6 @@ export const starlink = async(i) =>{
     mGS3.innerHTML = "";
 
     let CCSDS_OMM_VERS = core.spaceTrack.CCSDS_OMM_VERS;
-    let COMMENT = core.spaceTrack.COMMENT;
     let CREATION_DATE = core.spaceTrack.CREATION_DATE;
     let ORIGINATOR = core.spaceTrack.ORIGINATOR;
     let OBJECT_NAME = core.spaceTrack.OBJECT_NAME;

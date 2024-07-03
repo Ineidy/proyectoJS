@@ -2,7 +2,7 @@ import { footer , changeFooter } from "./modules/footer.js";
 import { menu, changeMenu } from "./modules/menu.js";
 import { Rockets_menu, Rocket } from "./modules/maquetar/rockets.js";
 import { Ship, Ships_menu } from "./modules/maquetar/ships.js"; 
-import { Roadster, Roadster_menu } from "./modules/maquetar/roadster.js";
+import { Roadster} from "./modules/maquetar/roadster.js";
 import { Crew_menu, Crews } from "./modules/maquetar/crew.js";
 import { History_menu, historia } from "./modules/maquetar/history.js";
 import { Capsule, Cpasules_menu } from "./modules/maquetar/capsules.js";
@@ -51,14 +51,6 @@ const setMenuShips = async(element) =>{
     await changeMenu(id)
 };
 document.setMenuShips = setMenuShips
-
-const setMenuRoasters = async(element) => {
-    let id = element.id;
-    await Roadster(id - 1);
-    await Roadster_menu();
-    await changeMenu(id)
-};
-document.setMenuRoasters = setMenuRoasters
 
 const setMenuCrew = async(element) => {
     let id = element.id;
@@ -186,7 +178,6 @@ document.openShips = openShips;
 const openRoadster = async(element) => {
     await setFooter(element);
     await Roadster(0);
-    await Roadster_menu();
 }
 document.openRoadster= openRoadster;
 
