@@ -270,10 +270,10 @@ body{
     overflow: hidden;
     overflow-x: auto;
     width: 30vw;
-    height: 240px;
+
 }
 .rocketImg{
-    width: 100%;
+    width: 85%;
     background-color: #ff0000;
     margin-right: 0px;
 }
