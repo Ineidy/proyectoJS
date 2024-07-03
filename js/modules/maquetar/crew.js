@@ -2,7 +2,7 @@ import { getCrew } from "../app.js";
 
 
 export const Crew_menu = async() => {
-    let container = document.querySelector(".navegationNumbersGrid");
+    let container = document.querySelector(".navigationNumbersGrid");
     container.innerHTML = "";
     let crew = await getCrew();
     let number = 1;
